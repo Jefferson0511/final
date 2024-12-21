@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.about-main {
+    min-height: 100vh;
+    background: linear-gradient(to right, #1A1A1A, #4B0082);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-family: "Manrope", sans-serif;
+}
+
+.head {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.head h1 {
+    background: linear-gradient(to right, #C8A1E0, #F5EFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3rem;
+}
+
+.head h2 {
+    background: linear-gradient(to right, #C8A1E0, #F5EFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section {
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    background: rgba(75, 0, 130, 0.3);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.section img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.section img:hover {
+    transform: scale(1.02);
+}
+
+.section .write-up {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.section .write-up p {
+    margin-bottom: 1.5rem;
+    color: #F5EFFF;
+}
+
+.section .write-up p:last-child {
+    margin-bottom: 0;
+}
+
+.pc-members {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.pc-members h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #F5EFFF;
+    position: relative;
+}
+
+.pc-members h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #C8A1E0, #F5EFFF);
+    border-radius: 2px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.member {
+    background: rgba(75, 0, 130, 0.3);
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.member img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.member h3 {
+    font-size: 1rem;
+    color: #F5EFFF;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.member p {
+    font-size: 0.9rem;
+    color: #C8A1E0;
+    font-weight: 300;
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .section img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+
+    .section .write-up {
+        margin: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-main {
+        padding: 2rem 1rem;
+    }
+
+    .head h1 {
+        font-size: 2.5rem;
+    }
+
+    .head h2 {
+        font-size: 1.5rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .pc-members h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .head h1 {
+        font-size: 2rem;
+    }
+
+    .head h2 {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body,h1 {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* Background Gradient for the entire page */
+.paymentsPageWrapper {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.payments-main {
+    min-height: 100vh;
+    background: linear-gradient(to right, #1A1A1A, #4B0082);
+    padding-bottom: 60px;
+    padding-top:0%;
+}
+
+/* Gradient for h1 and h2 */
+.paymentsHeader {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.paymentsHeader h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #C8A1E0, #F5EFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.paymentsHeader h2 {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+}
+
+#highlight {
+  background: linear-gradient(to right, #FF7F50, #FF1493);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+.paymentsBody {
+    display: flex;
+    margin: 2rem;
+    justify-content: space-around;
+    border-radius: 3rem;
+    padding: 2rem;
+    padding-top:0%;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    max-width: 80rem; /* Maximum width for better layout */
+    width: 100%; /* Ensures it fits the container */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.bankSection, .qrCodeSection {
+    flex: 1; /* Allow both sections to grow equally */
+    margin: 1rem; /* Add margin for spacing */
+    min-width: 25rem; /* Minimum width for responsiveness */
+    max-width: 35rem; /* Maximum width for better layout */
+    background: white; /* Background for better contrast */
+    border-radius: 1rem; /* Rounded corners */
+    padding: 1rem; /* Padding inside the sections */
+    text-align: center;
+}
+
+h3 {
+    text-align: center; /* Center align headers */
+    margin-bottom: 1rem; /* Space below headers */
+    font-size: 2rem;
+}
+
+.bankSection p {
+    font-size: 1.5rem;
+}
+.qrCodeSection img {
+    max-width: 75%; /* Prevent the image from overflowing its container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Treat the image as a block element for centering */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .paymentsPageWrapper {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .bankSection, .qrCodeSection {
+        width: 90%;
+        min-width: unset;
+        margin: 1rem auto;
+    }
+
+    .paymentsBody {
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bankSection, .qrCodeSection {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .bankSection p {
+        font-size: 1rem;
+    }
+
+    .qrCodeSection img {
+        max-width: 220px;
+    }
+}

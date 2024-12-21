@@ -1,0 +1,61 @@
+.pastor-main {
+    position: absolute;
+    height: 84vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #EBD3F8;
+    background-size: cover;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+/* .pastor-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 2;
+} */
+
+.pastor-welcome-message {
+    position: absolute;
+    top: 2%; /* Aligns the message to the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the message horizontally */
+    width: 100%;
+    padding: 1em; /* Add padding if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    z-index: 2;
+    text-align: center;
+}
+
+.pastor-welcome-message h1 {
+    font-size: 3em;
+    margin: 0; /* Remove any default margin to avoid unnecessary spacing */
+    color: #2E073F;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.pastor-welcome-message h2 {
+    font-size: 2em;
+    margin: 0; /* Remove any default margin to avoid unnecessary spacing */
+    margin-top: 7%;
+    color: #2E073F;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pastor-welcome-message p {
+    text-align: justify;
+    font-size: 1.15em;
+    margin: 13%;
+    margin-top: 0.5em;
+    color: #EBD3F8;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+    border-radius: 8px;
+    text-shadow: 1px 1px 3px #2E073F;
+}

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+html,
+body {
+    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif; 
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    margin: 0%;
+    flex: 1;
+}
+
+header,
+footer {
+    background-color: #A594F9;
+    color: #F7EFE5;
+    text-align: center;
+    padding: 0.25% 2%;
+}
+
+/* Transparent header for homepage */
+.header-transparent {
+    font-family: "Josefin Sans", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: rgb(0, 0, 0); 
+    z-index: 10; 
+}
+
+.header-transparent nav ul li {
+    margin: 0 3%;
+}
+  
+.header-transparent a {
+    color: #E5D9F2; 
+    font-size: large;
+    text-shadow: 1px 1px 3px rgba(165, 148, 249, 0.5);
+}
+
+/* Regular header for other pages */
+header {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #E5D9F2;
+    color: #A594F9;
+    text-align: center;
+    font-size: medium;
+    position: relative;
+    z-index: 10;
+}
+
+footer {
+    margin-top: auto;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    z-index: 10;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0.5%;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-right: 3rem;
+}
+
+header nav ul li {
+    display:inline-block;
+    margin: 0 3%;
+}
+
+a {
+    text-decoration: none;
+    color: #2E073F;
+    /* text-shadow: 1px 1px 3px rgb(255, 255, 255);  */
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+
+main {
+    padding: 5%;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    width: 100%;
+    padding: 2%;
+}
+
+/* Media Queries */
+
+/* Hamburger Menu and Side Panel Styles */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    z-index: 20;
+    color: #E5D9F2; /* Change to your preferred color */
+}
+
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: #A594F9; /* Adjust background color as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 15;
+}
+
+.nav-links a {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #E5D9F2;
+    text-shadow: none; /* Remove text shadow for better visibility */
+}
+
+.nav-links.open {
+    right: 0; /* Slide in the panel */
+}
+/* MEDIA QUERIES FOR MOBILE SCREEN */
+
+/* Styles only for screens 768px and below */
+@media (max-width: 768px) {
+    /* Hide the regular navigation and show the hamburger icon on mobile */
+    nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-menu {
+        display: none; /* Hide the full navigation */
+    }
+    /* Hamburger icon styling */
+    .hamburger-icon {
+        display: flex; /* Show the hamburger icon */
+        flex-direction: column;
+        align-items: flex-end;
+        cursor: pointer;
+        z-index: 11; /* Ensure it sits above the nav */
+        padding: 5%;
+        position: relative; /* Added to ensure position stacking */
+    }
+
+    .hamburger-icon .line {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px;
+        transition: 0.3s;
+        position: relative; /* Make sure lines are positioned correctly */
+        z-index: 12; /* Ensure the lines are above other content */
+    }
+
+    /* Fullscreen mobile navigation */
+    .nav-menu.open {
+        display: flex; /* Show the menu when hamburger is clicked */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Adjust to 100% for better fit */
+        height: 100vh; /* Full height of the viewport */
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 10;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-menu.open ul {
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .nav-menu.open ul li {
+        margin: 1.5em 0;
+    }
+
+    .nav-menu.open ul li a {
+        font-size: 1.5em;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Hide regular list items on mobile */
+    nav ul li {
+        display: none;
+    }
+    /* Responsive Navbar Styles */
+.responsive-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between hamburger and heading */
+    padding: 1em; /* Add some padding */
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: Background color */
+    color: white; /* Text color */
+}
+
+.navbar-heading {
+    flex: 1; /* Allows the heading to take up remaining space */
+    text-align: center; /* Center align the heading */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+}
+
+/* Hamburger icon styles can remain the same */
+.hamburger-icon {
+    display: flex; /* Show the hamburger icon */
+    flex-direction: column;
+    align-items: flex-end; /* Align to the right */
+    cursor: pointer;
+    z-index: 11; /* Ensure it sits above the nav */
+    padding: 5%;
+}
+
+/* Existing styles */
+.hamburger-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+}
